@@ -17,6 +17,9 @@ export default function AIAssistantPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Copy */}
             <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-bold">
+                Phase 2 — Now Live
+              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
                 Pay. Ask. <span className="text-teal-400 block mt-2">Travel India with Confidence.</span>
               </h1>

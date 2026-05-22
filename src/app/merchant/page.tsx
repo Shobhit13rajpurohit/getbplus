@@ -20,6 +20,9 @@ export default function MerchantPortalPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
             <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4C1D95]/20 text-[#D8B4FE] text-sm font-bold">
+                GetB+ For Business
+              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
                 More International Customers. <br/>
                 <span className="text-gold">No New Terminal. No New Bank.</span>

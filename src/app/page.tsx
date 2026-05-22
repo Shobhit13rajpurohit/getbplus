@@ -24,8 +24,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/30 bg-gold/10 text-gold text-sm font-medium">
+                <span className="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                Phase 2 — Now Live
+              </div>
+
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
-                Your Card. <span className="text-gold block mt-2">India&apos;s UPI QR.</span>
+                Pay. Navigate. <span className="text-gold block mt-2">Travel India with Confidence.</span>
               </h1>
 
               <p className="text-xl text-gray-300 md:pr-12 leading-relaxed">
@@ -36,6 +41,12 @@ export default function Home() {
                 <Button size="lg" className="w-full sm:w-auto text-lg rounded-full px-8 py-6">Download Free — iOS & Android</Button>
                 <Link href="#explore" className="inline-flex items-center justify-center h-14 px-8 py-2 text-lg font-medium text-white hover:text-gold border border-white/20 hover:border-gold/50 rounded-full transition-all">
                   Explore Features →
+                </Link>
+              </div>
+
+              <div className="pt-2">
+                <Link href="/about" className="text-sm font-medium text-gold hover:text-gold/80 transition-colors">
+                  What&apos;s New in Phase 2 →
                 </Link>
               </div>
 
@@ -165,6 +176,7 @@ export default function Home() {
 
             {/* Card 2 */}
             <div className="bg-navy border border-white/5 hover:border-teal-500/30 transition-colors p-8 rounded-2xl relative group">
+              <div className="absolute top-4 right-4 px-2 py-1 text-[10px] font-bold bg-gold/20 text-gold rounded-full">NEW</div>
               <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center mb-6 text-teal-400 group-hover:scale-110 transition-transform">
                 <Bot size={24} />
               </div>
@@ -175,6 +187,7 @@ export default function Home() {
 
             {/* Card 3 */}
             <div className="bg-navy border border-white/5 hover:border-green-500/30 transition-colors p-8 rounded-2xl relative group">
+              <div className="absolute top-4 right-4 px-2 py-1 text-[10px] font-bold bg-gold/20 text-gold rounded-full">NEW</div>
               <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
                 <Car size={24} />
               </div>
@@ -185,6 +198,7 @@ export default function Home() {
 
             {/* Card 4 */}
             <div className="bg-navy border border-white/5 hover:border-amber-500/30 transition-colors p-8 rounded-2xl relative group">
+              <div className="absolute top-4 right-4 px-2 py-1 text-[10px] font-bold bg-gold/20 text-gold rounded-full">NEW</div>
               <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 transition-transform">
                 <Briefcase size={24} />
               </div>

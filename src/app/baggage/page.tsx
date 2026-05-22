@@ -13,6 +13,9 @@ export default function BaggagePage() {
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-navy overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-bold mb-8">
+            Phase 2 — Now Live
+          </div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white mb-6">
             Checked Out But <span className="text-amber-500">Nowhere to Go?</span>
           </h1>

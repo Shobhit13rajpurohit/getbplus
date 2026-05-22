@@ -33,6 +33,9 @@ export default function TransportPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Copy */}
             <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-bold">
+                Phase 2 — Now Live
+              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
                 Airport to Hotel. <span className="text-green-400 block mt-2">Fixed Fare. Zero Surprises.</span>
               </h1>

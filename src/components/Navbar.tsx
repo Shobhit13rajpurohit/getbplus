@@ -41,28 +41,32 @@ export default function Navbar() {
 
   const featureLinks = [
     {
-      name: 'UPI Payments',
-      desc: 'Scan & pay anywhere in India',
-      href: '/how-it-works',
-      icon: QrCode,
-    },
-    {
       name: 'AI Travel Assistant',
       desc: 'Ask fares, stay safe',
       href: '/ai-assistant',
       icon: Bot,
+      isNew: true
     },
     {
       name: 'Airport Transport',
       desc: 'Fixed fares, vetted drivers',
       href: '/transport',
       icon: Car,
+      isNew: true
     },
     {
       name: 'Baggage Storage',
       desc: 'Store bags, explore free',
       href: '/baggage',
       icon: Briefcase,
+      isNew: false
+    },
+    {
+      name: 'UPI Payments',
+      desc: 'Scan & pay anywhere in India',
+      href: '/how-it-works',
+      icon: QrCode,
+      isNew: false
     }
   ]
 
@@ -119,6 +123,11 @@ export default function Navbar() {
                               <span className="text-[15px] font-semibold text-navy group-hover:text-gold transition-colors">
                                 {feature.name}
                               </span>
+                              {feature.isNew && (
+                                <span className="px-1.5 py-0.5 text-[10px] font-bold bg-gold/20 text-gold rounded-full">
+                                  NEW
+                                </span>
+                              )}
                             </div>
                             <p className="text-[13px] text-gray-500 mt-0.5">
                               {feature.desc}
@@ -196,6 +205,11 @@ export default function Navbar() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-medium text-gray-200">{feature.name}</span>
+                        {feature.isNew && (
+                          <span className="px-1.5 py-0.5 text-[10px] font-bold bg-gold/20 text-gold rounded-full">
+                            NEW
+                          </span>
+                        )}
                       </div>
                     </div>
                   </Link>
