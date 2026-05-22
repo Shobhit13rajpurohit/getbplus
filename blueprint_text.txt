@@ -1,0 +1,301 @@
+Table of Contents
+STEP 1  —  Product Summary
+STEP 2  —  Complete Website Structure (All 10 Pages)
+STEP 3  —  Home Page Full Breakdown
+STEP 4  —  UX + UI Design Direction
+STEP 5  —  Conversion Strategy
+STEP 6  —  SEO + Content Strategy
+STEP 7  —  Developer Blueprint & Final Checklist
+What Is GetB+?
+GetB+ is a cross-border fintech platform that lets international travelers pay seamlessly across India using their existing Visa, Mastercard, or Amex card at any UPI QR-accepting merchant — with zero local bank account, zero wallet top-up, and zero cash exchange required.
+India has the world's largest QR-payment economy, with over 131 billion UPI transactions processed in FY2024. Yet every one of the 11.5 million international tourists who arrive annually is locked out of this system — their global cards simply do not work at UPI QR codes, which dominate Indian merchant acceptance from street vendors to fine-dining restaurants.
+GetB+ solves this at the infrastructure level: it tokenizes a foreign card, provisions a virtual UPI ID linked to that card via a licensed banking partner, and enables scan-and-pay at any of India's 350+ million UPI-enabled merchants — instantly, securely, and without the user needing to understand the underlying complexity.
+Four-Line Product Elevator Pitch
+GetB+ bridges the gap between global payment cards and India's QR economy. Travelers link their existing Visa, Mastercard, or Amex card, receive a virtual UPI identity, and pay anywhere in India by simply scanning a QR code. No Indian bank account. No currency exchange. No cash. Just tap, scan, and pay — powered by NPCI-grade infrastructure.
+Core Value Propositions for Website Communication
+Website Page Overview
+Page 1 — Home Page (getbplus.com)
+PURPOSE
+The Home page has one job: convert a curious visitor into an app download within 60 seconds. It must answer three unconscious questions: "What is this?", "Why should I trust it?", and "What do I do next?" — in that order, before the user scrolls past the fold.
+AUDIENCE
+International tourists pre-trip planning (Google search), NRIs researching before India visits, and direct word-of-mouth arrivals. Assume they are on mobile, not desktop.
+Sections Inside the Home Page:
+HERO: Bold headline + one-line sub + two CTAs (Download App / How It Works)
+TRUST BAR: Card network logos (Visa, Mastercard, Amex) + "RBI-Compliant" + "NPCI Partner" + user count stat
+PROBLEM STATEMENT: "India runs on QR. Your card doesn't." — visual split showing frustrated tourist vs. smooth GetB+ user
+HOW IT WORKS: 3-step horizontal flow with icons + micro-copy (Link Card → Get UPI ID → Scan & Pay)
+FEATURES GRID: 6 core features in card layout
+STATS SECTION: 350M+ merchants · 11.5M tourists/year · <3 min setup · 99.5% uptime
+SOCIAL PROOF: 3 traveler testimonials + App Store star rating
+SECURITY STRIP: One-line security badges row + link to Security page
+FINAL CTA BLOCK: "Start paying smarter in India" + app store buttons
+FOOTER: Full links, compliance text, social, contact
+Key Content Copy Guidance:
+Headline: Short. Powerful. Non-technical. Not "cross-border fintech UPI bridge" — say: "Your Card Works Everywhere in India Now."
+All copy in international English — no Indian colloquialisms. Write like Wise.com or Revolut.
+Avoid: "best", "revolutionary", "disrupting" — these signal low credibility to global users.
+Show actual screenshots of the app on real phone mockups (not 3D floating devices)
+UI Elements Required:
+Full-bleed hero with dark navy background + gold accent headline
+Animated QR scan mockup (CSS animation, not video — keeps page fast)
+Sticky navigation bar with glass-morphism on scroll
+App Store + Google Play download buttons (above the fold on mobile)
+Logo carousel for trusted partners (Visa / MC / Amex / HDFC / NPCI)
+Page 2 — How It Works
+PURPOSE
+This is the most important trust-building page. International users are skeptical of new fintech products. This page must make the technology feel simple, safe, and inevitable. Walk them through the process so thoroughly that they feel confident before downloading.
+Sections:
+PAGE HERO: "Three steps. Ninety seconds. Then you can pay anywhere." — dark background, gold step numbers
+STEP-BY-STEP VISUAL FLOW: Large illustrated steps with app screenshots embedded
+STEP 1 — LINK YOUR CARD: What cards work, how card data is protected (PCI-DSS tokenization explained in plain English), "Your card number never touches our servers"
+STEP 2 — GET YOUR INDIA PAYMENT ID: Explain virtual UPI ID in layman terms, "Think of it as your Indian payment address — linked to your card, not your bank account"
+STEP 3 — SCAN & PAY ANYWHERE: Show map of merchant types (restaurants, autos, bazaars, pharmacies), explain QR scan flow, receipt via email
+SUPPORTED CARDS SECTION: Visual card logos — Visa, Mastercard, Amex + "More networks coming soon"
+MERCHANT MAP CALLOUT: "Works at 350 million+ merchants across India — anywhere you see a QR code"
+TECH BEHIND IT (SIMPLIFIED): One paragraph on NPCI + banking partner trust. No jargon. "Built on the same rails that power India's national payment system."
+FAQ ACCORDION: 8 most common questions
+BOTTOM CTA: "Ready to set up? Takes under 3 minutes." + app download buttons
+UI Elements:
+Vertical scrolling step-by-step with progress indicator on left side (desktop) or step pills (mobile)
+Embedded phone mockup that changes frame as user scrolls (scroll-jacking, done subtly)
+Animated arrow connectors between steps (CSS, not GIF)
+Expandable FAQ with smooth accordion (no page jump)
+Page 3 — Pricing & Fees
+PURPOSE
+Foreign users are HIGHLY sensitive to hidden fees — this is Wise.com's entire brand identity. GetB+ must be brutally transparent. This page should make the user feel: "I know exactly what I'm paying. No surprises." That clarity IS the conversion tool.
+Sections:
+HEADLINE: "Transparent fees. No surprises. Ever." — subtext: "We believe you should know exactly what you're paying before you pay."
+FEE TABLE: Clean 3-column table — What, How Much, When
+FX RATE EXPLAINER: "We show you the real exchange rate, plus our small service fee — before every transaction. No hidden markup hidden in the rate."
+COMPARISON SECTION: GetB+ vs Cash Exchange Desk vs International Card at POS — show total cost for a ₹1,000 transaction each way
+EXAMPLE TRANSACTION: "$20 USD → ₹1,660 at today's rate. GetB+ fee: $0.40. You pay: $20.40 total." — real-time example
+FREE TIER vs PAID: If there's a freemium model, explain clearly with a comparison table
+NO SUBSCRIPTION CALLOUT: "No monthly fee. No setup fee. Pay only when you transact." — if applicable
+ENTERPRISE / PARTNER PRICING: Link to Partner page for volume pricing
+Fee Table Structure (sample):
+UI Elements:
+Color-coded fee table: green = free, gold = small fee
+Live FX calculator widget: user enters USD/GBP/EUR amount → see INR equivalent + GetB+ fee
+"Today's Rate" badge refreshed daily
+Expandable fine print section (not hidden, but neatly collapsed)
+Page 4 — Security & Compliance
+PURPOSE
+For a fintech product targeting foreign users, Security is not just a page — it is the conversion bottleneck. A user who doesn't trust the product will never download the app, regardless of how good the features are. This page must be comprehensive, credible, and human — not a wall of legal text.
+Sections:
+HEADLINE: "Your money is safe. Your data is safe. Here's exactly why." — navy background, white text, gold lock icon
+COMPLIANCE BADGES ROW: PCI-DSS · NPCI Partner · RBI Compliant · ISO 27001 (when achieved) · Visa Verified · Mastercard SecureCode
+CARD SECURITY EXPLAINER: "Your card number never reaches our servers" — plain English PCI-DSS tokenization explanation. Use a simple diagram: Card → Token (stored by Visa) → GetB+ sees only token. Your card: SAFE.
+DATA PROTECTION: DPDP Act 2023 compliance. Data stored in India (AWS Mumbai). GDPR-aligned practices for EU users.
+ZERO LIABILITY POLICY: Clear statement: "If you report an unauthorized transaction within 24 hours, you pay nothing. We cover it." — link to full policy
+BANKING PARTNER TRUST: "Payments processed through [HDFC Bank] — one of India's largest regulated financial institutions."
+HOW WE PROTECT YOUR MONEY: 3 cards — Tokenization · Biometric Auth Required · 24/7 Monitoring
+REPORTING A PROBLEM: "Found something wrong? Contact us immediately — we respond within 4 hours."
+REGULATORY LINKS: NPCI website link, RBI PA framework link — shows transparency
+UI Elements:
+Large trust badges (not tiny icon bar — make them big and official-looking)
+Simple diagram: card tokenization flow (3 boxes, arrows, checkmarks)
+Green checkmark list for compliance items
+Pull-quote: "Built on the same regulated infrastructure as India's national payment banks."
+Page 5 — For Travelers (International Tourists)
+PURPOSE
+A targeted landing page for international tourists visiting India — this page speaks directly to their frustration, uses their language, and addresses their specific concerns. This page also ranks for SEO queries like "how to pay in India with foreign card" and "UPI for tourists India."
+Sections:
+HERO: "Visiting India? Leave the cash worries behind." — subtext: "Pay at any market, restaurant, or auto-rickshaw with your existing card."
+EMPATHY SECTION: "We know the feeling." — 4 cards: cash exchange lines, card declined, auto driver says "no card", ATM fees. Real pain points, human copy.
+CITY GUIDES CALLOUT: "Works in Delhi · Mumbai · Jaipur · Goa · Varanasi · Bengaluru — and everywhere in between."
+AIRPORT ACTIVATION: "Get started before your flight lands. Set up in 3 minutes at home. Arrive ready to pay."
+WHAT YOU CAN PAY FOR: Icon grid — Street food · Restaurants · Auto-rickshaws · Shopping · Pharmacies · Hotels · Tours
+SAFETY TIPS SECTION (soft sell): "We also give you scam alerts, standard price guides for popular tourist routes, and verified local tips."
+TESTIMONIAL: 2 traveler quotes with country flags + names
+STEP-BY-STEP SETUP GUIDE: "Here's how to set it up in 3 minutes before your flight."
+DOWNLOAD CTA: Large, prominent, with QR code to scan for direct download
+SEO Target Keywords for This Page:
+"how to pay in India with credit card"
+"UPI for tourists India 2026"
+"foreign card accepted in India QR payment"
+"India travel payment guide"
+"pay with Visa at UPI QR India"
+Page 6 — For NRIs
+PURPOSE
+NRIs (Non-Resident Indians) are a distinct and high-value user segment. They have foreign-issued cards, visit India regularly, understand UPI culturally, and are frustrated that their foreign cards don't work seamlessly. This page speaks their language — they don't need India explained, they need the solution validated.
+Sections:
+HERO: "You know India. Your card doesn't. Yet." — subtext: "Finally — use your US, UK, or UAE card at every UPI QR in India."
+NRI PAIN POINTS: Specific to NRIs — "Tired of borrowing cash from family? Embarrassed when your card declines at your favourite restaurant back home?"
+HOW IT WORKS FOR NRIs: Same core flow but framed around NRI context — "Link your Chase / Barclays / Emirates NBD card. Done."
+FAMILY PAYMENTS CALLOUT (V2 feature teaser): "Coming soon: Split bills with family. Transfer money to Indian contacts."
+REWARD POINTS EXPLAINER: "Your Air India miles, HSBC points, Amex rewards — use them in India. (Coming soon.)"
+DIASPORA COMMUNITIES: "Trusted by Indians in USA · UK · UAE · Canada · Singapore · Australia"
+DOWNLOAD CTA: Country-specific copy: "Download from the US App Store · UK App Store · UAE"
+Page 7 — Partner With Us
+PURPOSE
+B2B acquisition page for airports, hotels, travel agencies, merchants, and technology partners. This page must communicate business value, not product features. Think ROI and revenue share, not user experience.
+Sections:
+HEADLINE: "Join India's cross-border traveler infrastructure." — Sub: "We help your international guests pay, and bring you more of them."
+PARTNER CATEGORIES (4 tiles):
+🏨 Hotels & Hospitality — "Your guests can now pay in any hotel shop, restaurant, or spa with their foreign card."
+✈️ Airports & Airlines — "First-point activation for every arriving international traveler."
+🛍️ Merchants & Retailers — "Accept international card payments via UPI. No new POS terminal needed."
+💼 Travel Agencies & OTAs — "Embed GetB+ into your booking flow. Earn per transaction."
+VALUE PROPOSITION: Revenue share model, co-branding opportunities, white-label options (V2)
+HOW PARTNERSHIP WORKS: 3-step: Apply → Integration → Go Live → Earn
+CURRENT PARTNERS: Logo wall (even if empty at launch — "Accepting pilot partners")
+PARTNERSHIP FORM: Name, Company, Type, Volume estimate, Message — clean form, no more than 6 fields
+CONTACT EMAIL: partnerships@getbplus.com
+Page 8 — About Us
+PURPOSE
+This page converts skeptics by humanizing the company. For a fintech startup targeting foreign users, credibility is critical. Investors and journalists also land here. Make it story-first, not CV-first.
+Sections:
+MISSION STATEMENT: "We are building the financial infrastructure that makes India accessible — one QR code at a time."
+FOUNDING STORY: Aadesh's personal story — 23 years in international trade, experienced the problem firsthand in Thailand and India. Human, specific, believable.
+THE PROBLEM WE OBSESS OVER: One paragraph on the structural gap — not about us, about the problem. This signals founder-market fit.
+TEAM SECTION: Aadesh S Jain (CEO), Ruchi Jain (CFO), Vikas Jain (COO), Akshay Jain (Global Expansion), Shilpi Jain (Chairperson) — photos, titles, 2-line bios.
+WHY WE'RE DIFFERENT: Not a generic features list — talk about approach, ethics, transparency
+COMPANY DETAILS: Adeshilps E-XP & TravelWithU Private Limited · Registered in India · DIPP recognized (when achieved)
+PRESS & MEDIA: "GetB+ in the news" — placeholder section with press kit download link
+INVESTOR RELATIONS: Light touch — "We are backed by strategic seed investors. For investor inquiries: investors@getbplus.com"
+Page 9 — Support / Help Center
+PURPOSE
+Reduce inbound support volume by answering the top 20 questions proactively. For foreign users, self-service support builds trust — it signals that the company anticipates their needs. Also critical for app store ratings: support experience is the #1 driver of star ratings.
+Support Page Structure:
+SEARCH BAR: Full-width, prominent — "How can we help?" — searches FAQ + articles
+QUICK LINKS (Top 5 Issues):
+How do I link my card?
+My payment failed — what do I do?
+How do I get a refund?
+Is my card supported?
+How to report fraud or unauthorized charge?
+FAQ CATEGORIES: Getting Started · Payments · Cards · Security · Account · Refunds & Disputes
+CONTACT OPTIONS: Live Chat (business hours IST) · Email: support@getbplus.com · Response time: < 4 hours
+SUBMIT A TICKET: Simple form — Email, Issue Type, Transaction ID (optional), Description
+STATUS PAGE LINK: "Check system status" → status.getbplus.com
+Top 10 FAQ Content (Must Be Written):
+Page 10 — Blog (SEO Engine)
+PURPOSE
+The blog is GetB+'s primary organic growth channel for international users. Tourists and NRIs actively search for India payment guidance — this is the highest-intent, cheapest acquisition channel available. Prioritize this from Month 3 onwards.
+Blog Categories:
+India Travel Payment Guide (core SEO category)
+NRI Finance & India Visits (NRI-targeted content)
+India Destination Guides with Payment Tips
+Fintech India News & Updates
+Product Updates & Feature Announcements
+10 Priority Blog Articles (Publish in Month 1–3):
+Navigation Bar
+Sticky nav. Transparent on hero, solid navy on scroll. Logo left. Links center. Two CTAs right.
+On mobile: Hamburger menu. Download CTA always visible as floating bottom button.
+Language: English only for MVP. Add language switcher placeholder (Hindi, Arabic, French) for V1.
+Section 1 — Hero
+GOAL
+Communicate the core value proposition in under 8 words. Drive app download as primary action. Do not explain the entire product — that's what the page below does.
+Hero Content:
+HEADLINE: "Your Card Works Everywhere in India Now."
+SUBHEADLINE: "Link your Visa, Mastercard, or Amex and pay at any shop, street stall, or restaurant across India — just scan the QR code."
+Primary CTA:   [ Download the App — Free ]   ← Gold filled button, rounded corners
+Secondary CTA: [ See How It Works → ]        ← Ghost button, white outline
+Supporting micro-copy below CTAs:
+"Available on App Store and Google Play · Free to download · Setup in 3 minutes"
+Hero Visual:
+Background: Deep navy (#0A1628) with subtle grid or circuit pattern (very subtle, < 5% opacity)
+Right side: Phone mockup showing GetB+ QR scan screen — real screenshot, not illustration
+Floating mini-card: Animated Visa card → transforms into QR scan → ₹ symbol (CSS animation)
+No stock photos. No happy tourist photos. Clean, product-first.
+Mobile: Stack vertically. Phone mockup below headline. CTAs full-width.
+Section 2 — Trust Signal Bar
+GOAL
+Instantly establish credibility. For foreign users, card network logos are more reassuring than text. This bar should appear immediately below the hero fold.
+Trust Bar Content:
+Light gray background strip. Single row. Centered. Items separated by thin vertical dividers.
+📌  Important: Do not say "NPCI Partner" unless the partnership is formally signed. Use "NPCI-aligned infrastructure" if not yet formalized. Regulatory accuracy matters for compliance.
+Section 3 — Problem → Solution
+GOAL
+Create an emotional "yes, that's me!" moment. Show the user their pain, then resolve it with GetB+. This section converts hesitant visitors who are still thinking "is this actually for me?"
+Problem Side Content:
+"India runs on QR codes. But your card doesn't work here."
+Visual: Street market photo (or illustration) with crossed-out card icon
+Pain point list (icons + short lines):
+"QR codes everywhere — your card, nowhere"
+"Cash exchange lines. Hidden fees. Safety risks."
+"ATM withdrawals — 3% to 5% gone instantly"
+"The auto-rickshaw driver doesn't take cards. Ever."
+Solution Side Content:
+"GetB+ gives your card a UPI identity. Now you can pay anywhere."
+Visual: Same street market — now with green checkmark, phone showing successful payment
+Solution list (icons + short lines):
+"One app. Scan any QR code. Done."
+"Your actual exchange rate — shown upfront."
+"No cash. No queues. No drama."
+"Works at 350 million+ merchants."
+Section 4 — How It Works (3-Step)
+GOAL
+Make the product feel simple. Three steps maximum. Clear iconography. The goal is not to explain the technology — it is to make the user think: "that's it? I can do that."
+Three Steps:
+Below the 3 steps: Link to full "How It Works" page → "Want the full details? See exactly how GetB+ works →"
+Section 5 — Features Grid
+GOAL
+Communicate the depth and completeness of the product without overwhelming. 6 features, each in its own card. Icons must be recognizable, not decorative.
+6 Feature Cards:
+📌  UI: 2×3 grid on desktop, 1 column on mobile. Each card has colored left border (gold), white background, subtle drop shadow.
+Section 6 — Stats / Social Proof Numbers
+GOAL
+Establish scale. Even at launch, certain stats are true and powerful. Do not use fake or inflated numbers — foreign users will research and fact-check.
+📌  Do not publish stats you cannot verify. For pre-launch, use "350M+ merchants in India accept UPI" (verifiable) and "< 3 minute setup" (product promise). Skip user count stats until you have real numbers.
+Section 7 — Testimonials
+GOAL
+Social proof from users who look like your target user. For pre-launch, use beta tester quotes or founder network quotes. Never fabricate reviews — but you can paraphrase real feedback from beta users with their permission.
+3 Testimonial Cards (Sample Structure):
+📌  UI: Card-style testimonials with star rating (5★), quote text, name, nationality flag, and a subtle left gold border. Carousel on mobile, 3-column on desktop.
+Section 8 — Security Reassurance Strip
+GOAL
+A single high-visibility strip placed between the testimonials and the final CTA. For users who scrolled past the features but haven't converted yet, this is the last trust push.
+🔒  Bank-grade encryption  ·  PCI-DSS Certified  ·  Visa & Mastercard tokenized  ·  Zero-liability fraud protection  ·  Data stored in India  ·  DPDP Act compliant
+Style: Full-width strip. Navy background. White text. Gold lock icons. One line. Click → Security page.
+Section 9 — Final CTA Block
+GOAL
+The last chance to convert before the footer. Make it emotionally compelling, not just functional. Reinforce the core value proposition one final time.
+HEADLINE: "India is waiting. Your card is ready. Are you?"
+SUBHEADLINE: "Join thousands of travelers who no longer carry cash in India. Set up in 3 minutes. Pay everywhere."
+CTA Block:   [ Download for iOS ]  [ Download for Android ]  — side by side, large, rounded
+Below buttons: "Free to download · No subscription · No hidden fees · 350M+ merchants"
+📌  This CTA block should have a dark navy background with the GetB+ logo in the center above the headline. Feels like a brand moment, not just a button.
+Section 10 — Footer
+Footer bottom bar (full width, dark navy): © 2026 Adeshilps E-XP & TravelWithU Private Limited · Regulated by RBI · Payments powered by NPCI · CIN: [Company Number]
+Design Philosophy
+"Global trust. Indian soul. Zero clutter."  — The GetB+ design standard is built on three pillars: institutional credibility (Stripe/Wise level), cultural warmth (India-appropriate gold and depth), and radical clarity (every element must earn its place).
+Color Palette
+Typography System
+📌  Use Google Fonts: Inter (primary) or DM Sans (alternative). Both are free, fast-loading, and carry the same institutional credibility as Stripe's Stripe Neue or Wise's Work Sans.
+Design Inspiration References
+Animation & Motion Direction
+"Purposeful, not decorative." — Every animation must serve comprehension, not aesthetics. This is a fintech product. Excessive animation reduces trust.
+📌  Tool recommendation: Use Framer Motion (if React/Next.js) or GSAP ScrollTrigger for scroll-based reveals. Lottie for any icon animations. No parallax effects — they cause motion sickness and hurt mobile performance.
+Mobile-First Approach
+80%+ of GetB+ users will discover the product on mobile — they are either searching from their phone before a trip or seeing it shared in a travel group. Design mobile first. Desktop is the enhanced experience.
+CTA Placement Strategy
+GetB+'s primary conversion metric is App Downloads. Every CTA on the website should funnel toward that action. Secondary conversion is waitlist signup (for users not ready to download immediately).
+📌  Rule: Never have two competing primary CTAs in the same viewport. One action per visible screen area. Secondary CTAs must be visually lighter (ghost button or text link).
+Trust Architecture for Foreign Users
+International users arrive with a trust deficit — they have never heard of GetB+ before. The website must systematically build trust across six dimensions before asking for a download.
+Objection Removal — Top 6 User Hesitations
+Conversion Rate Benchmarks & Targets
+Keyword Strategy
+GetB+ sits at the intersection of three high-intent search clusters: (1) India travel payments, (2) UPI for foreigners, and (3) NRI finance. All three have real search volume and very low competition — there is no established brand owning these keywords.
+Tier 1 — Highest Priority Keywords (Target Pages)
+Tier 2 — Long-Tail Keywords (Blog Content)
+Content Calendar — First 6 Months
+Technical SEO Requirements
+The website must be technically SEO-perfect from day one. SEO mistakes at launch are expensive to fix later.
+Distribution Channels for Content
+Recommended Tech Stack
+Page-by-Page Developer Task Checklist
+Phase 1 — Core Website (Week 1–3, Before App Launch)
+Phase 2 — Full Launch (Week 3–6)
+Pre-Launch Quality Checklist
+Component Library — Reusable UI Components
+Tell your developer to build these as reusable components from Day 1. This saves 40% of development time across the full website.
+Domain, Hosting & Infrastructure
+Final Summary — What to Hand to Your Developer
+Hand this entire document to your developer or AI build tool. Additionally provide: (1) GetB+ brand assets — logo in SVG + PNG, gold/navy color codes, (2) Team photos in high resolution, (3) App Store links once live, (4) Banking partner logo (once partnership confirmed), (5) Card network logo usage permissions from Visa/MC/Amex brand guidelines, (6) Legal pages draft (Privacy Policy, Terms — use a fintech legal template and customize).
+Estimated total website build time with this specification:
+At Indian agency rates (₹1,500–2,500/hour) → ₹2.25L–5.25L total. At freelancer rates (₹800–1,200/hour) → ₹1.2L–2.5L. Budget ₹2–3L for quality execution with Next.js + full design implementation.
+GetB+ Website Blueprint v1.0
+Prepared by: Senior Product Designer + UX Strategist + Fintech Website Expert
+Adeshilps E-XP & TravelWithU Private Limited  ·  Confidential  ·  May 2026
