@@ -1,14 +1,16 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown, Bot, Car, Briefcase, QrCode } from 'lucide-react'
 import { Button } from './ui/Button'
 import { cn } from '@/lib/utils'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isFeaturesOpen, setIsFeaturesOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +20,54 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
-    { name: 'How It Works', href: '/how-it-works' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'For Travelers', href: '/for-travelers' },
-    { name: 'For NRIs', href: '/for-nris' },
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsFeaturesOpen(false)
+      }
+    }
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsFeaturesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleEscape)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [])
+
+  const featureLinks = [
+    {
+      name: 'AI Travel Assistant',
+      desc: 'Ask fares, stay safe',
+      href: '/ai-assistant',
+      icon: Bot,
+      isNew: true
+    },
+    {
+      name: 'Airport Transport',
+      desc: 'Fixed fares, vetted drivers',
+      href: '/transport',
+      icon: Car,
+      isNew: true
+    },
+    {
+      name: 'Baggage Storage',
+      desc: 'Store bags, explore free',
+      href: '/baggage',
+      icon: Briefcase,
+      isNew: false
+    },
+    {
+      name: 'UPI Payments',
+      desc: 'Scan & pay anywhere in India',
+      href: '/how-it-works',
+      icon: QrCode,
+      isNew: false
+    }
   ]
 
   return (
@@ -41,20 +86,83 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+            <Link
+              href="/how-it-works"
+              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              How It Works
+            </Link>
+
+            {/* Features Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setIsFeaturesOpen(!isFeaturesOpen)}
+                className="flex items-center text-gray-300 hover:text-white transition-colors text-sm font-medium gap-1"
+                aria-expanded={isFeaturesOpen}
               >
-                {link.name}
-              </Link>
-            ))}
+                Features <ChevronDown size={14} className={cn("transition-transform", isFeaturesOpen && "rotate-180")} />
+              </button>
+
+              {isFeaturesOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-white rounded-xl shadow-xl border border-navy/10 overflow-hidden">
+                  <div className="p-6">
+                    <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Features</h3>
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+                      {featureLinks.map((feature) => (
+                        <Link
+                          key={feature.name}
+                          href={feature.href}
+                          onClick={() => setIsFeaturesOpen(false)}
+                          className="flex items-start gap-4 group p-2 -m-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        >
+                          <div className="flex-shrink-0 mt-1">
+                            <feature.icon className="w-6 h-6 text-gold group-hover:text-navy transition-colors" />
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <span className="text-[15px] font-semibold text-navy group-hover:text-gold transition-colors">
+                                {feature.name}
+                              </span>
+                              {feature.isNew && (
+                                <span className="px-1.5 py-0.5 text-[10px] font-bold bg-gold/20 text-gold rounded-full">
+                                  NEW
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-[13px] text-gray-500 mt-0.5">
+                              {feature.desc}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/pricing"
+              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/for-travelers"
+              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              For Travelers
+            </Link>
           </div>
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/about" className="text-sm text-gray-300 hover:text-white">About</Link>
+            <Link
+              href="/merchant"
+              className="text-sm text-gray-300 hover:text-white border border-transparent hover:border-navy px-3 py-2 rounded-md transition-all"
+            >
+              For Merchants
+            </Link>
             <Button variant="default">Download App</Button>
           </div>
 
@@ -72,27 +180,69 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-navy border-t border-white/10 shadow-lg">
-          <div className="px-4 pt-2 pb-6 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+        <div className="md:hidden absolute top-full left-0 w-full bg-navy border-t border-white/10 shadow-lg h-screen overflow-y-auto pb-24">
+          <div className="px-4 pt-2 space-y-1">
             <Link
-              href="/about"
+              href="/how-it-works"
               className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              About
+              How It Works
             </Link>
-            <div className="pt-4 px-3">
-              <Button variant="default" className="w-full justify-center">Download App</Button>
+
+            {/* Mobile Features Expanded */}
+            <div className="px-3 py-2">
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Features</div>
+              <div className="space-y-1">
+                {featureLinks.map((feature) => (
+                  <Link
+                    key={feature.name}
+                    href={feature.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center gap-3 px-3 py-3 rounded-md hover:bg-white/5"
+                  >
+                    <feature.icon className="w-5 h-5 text-gold" />
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium text-gray-200">{feature.name}</span>
+                        {feature.isNew && (
+                          <span className="px-1.5 py-0.5 text-[10px] font-bold bg-gold/20 text-gold rounded-full">
+                            NEW
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href="/pricing"
+              className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/for-travelers"
+              className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              For Travelers
+            </Link>
+
+            <div className="pt-4 mt-4 border-t border-white/10">
+              <Link
+                href="/merchant"
+                className="block px-3 py-4 text-base font-medium text-gold hover:text-gold/80 hover:bg-white/5 rounded-md"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                For Merchants →
+              </Link>
+              <div className="pt-4 px-3">
+                <Button variant="default" className="w-full justify-center">Download App</Button>
+              </div>
             </div>
           </div>
         </div>
