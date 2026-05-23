@@ -1,8 +1,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { Card, CardContent } from "@/components/ui/Card"
-import {
-  ShieldCheck,
+import { 
+  ShieldCheck, 
   Star,
   Bot,
   Car,
@@ -19,37 +19,26 @@ export default function Home() {
         {/* Background Accents */}
         <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[800px] h-[800px] bg-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 -ml-40 -mb-40 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
-
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/30 bg-gold/10 text-gold text-sm font-medium">
-                <span className="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-                Phase 2 — Now Live
-              </div>
-
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
-                Pay. Navigate. <span className="text-gold block mt-2">Travel India with Confidence.</span>
+                Your Card. <span className="text-gold block mt-2">India&apos;s UPI QR.</span>
               </h1>
-
+              
               <p className="text-xl text-gray-300 md:pr-12 leading-relaxed">
                 GetB+ turns your Visa, Mastercard, or Amex into a complete India travel toolkit — UPI payments at 350M+ merchants, AI travel assistant, airport transport, and luggage storage.
               </p>
-
+              
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" className="w-full sm:w-auto text-lg rounded-full px-8 py-6">Download Free — iOS & Android</Button>
                 <Link href="#explore" className="inline-flex items-center justify-center h-14 px-8 py-2 text-lg font-medium text-white hover:text-gold border border-white/20 hover:border-gold/50 rounded-full transition-all">
                   Explore Features →
                 </Link>
               </div>
-
-              <div className="pt-2">
-                <Link href="/about" className="text-sm font-medium text-gold hover:text-gold/80 transition-colors">
-                  What&apos;s New in Phase 2 →
-                </Link>
-              </div>
-
+              
               {/* Trust Bar row directly in hero or below */}
               <div className="flex flex-wrap gap-x-6 gap-y-4 items-center pt-8 border-t border-white/10">
                 <div className="flex items-center gap-2 opacity-70">
@@ -84,7 +73,7 @@ export default function Home() {
               <div className="absolute inset-0 border-[8px] border-gray-800 rounded-[2.5rem] bg-navy-dark shadow-2xl overflow-hidden z-20">
                 {/* Top Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-gray-800 rounded-b-xl z-30"></div>
-
+                
                 {/* Screen content area with cross-fade animation setup */}
                 <div className="relative w-full h-full">
                   {/* Screen 1: Payment Success */}
@@ -105,7 +94,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-
+                  
                   {/* Screen 2: AI Chat */}
                   <div className="absolute inset-0 bg-navy flex flex-col p-4 pt-10 animate-fade-in-out-delayed opacity-0">
                     <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
@@ -115,7 +104,7 @@ export default function Home() {
                         <div className="text-[10px] text-teal-400">Travel Expert</div>
                       </div>
                     </div>
-
+                    
                     <div className="space-y-4 flex-1">
                       <div className="self-end bg-white/10 ml-8 p-3 rounded-2xl rounded-tr-sm text-sm text-white">
                         Was my ₹350 auto fare from CP to India Gate fair?
@@ -127,13 +116,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
+              
               {/* Background Glow behind phone */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gold/30 blur-[60px] rounded-full z-10"></div>
             </div>
           </div>
         </div>
-
+        
         {/* Custom Animation Styles */}
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes fade-in-out {
@@ -162,7 +151,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-white mb-4">Everything You Need in India</h2>
             <p className="text-xl text-gray-400">One app replacing your wallet, guidebook, and travel agent.</p>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
             <div className="bg-navy border border-white/5 hover:border-gold/30 transition-colors p-8 rounded-2xl relative group">
@@ -173,10 +162,9 @@ export default function Home() {
               <p className="text-gray-400 text-sm mb-6 flex-1">Your foreign card works at 350M+ merchants. No bank needed.</p>
               <Link href="/how-it-works" className="text-gold text-sm font-semibold group-hover:underline">How It Works →</Link>
             </div>
-
+            
             {/* Card 2 */}
             <div className="bg-navy border border-white/5 hover:border-teal-500/30 transition-colors p-8 rounded-2xl relative group">
-              <div className="absolute top-4 right-4 px-2 py-1 text-[10px] font-bold bg-gold/20 text-gold rounded-full">NEW</div>
               <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center mb-6 text-teal-400 group-hover:scale-110 transition-transform">
                 <Bot size={24} />
               </div>
@@ -187,7 +175,6 @@ export default function Home() {
 
             {/* Card 3 */}
             <div className="bg-navy border border-white/5 hover:border-green-500/30 transition-colors p-8 rounded-2xl relative group">
-              <div className="absolute top-4 right-4 px-2 py-1 text-[10px] font-bold bg-gold/20 text-gold rounded-full">NEW</div>
               <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
                 <Car size={24} />
               </div>
@@ -198,7 +185,6 @@ export default function Home() {
 
             {/* Card 4 */}
             <div className="bg-navy border border-white/5 hover:border-amber-500/30 transition-colors p-8 rounded-2xl relative group">
-              <div className="absolute top-4 right-4 px-2 py-1 text-[10px] font-bold bg-gold/20 text-gold rounded-full">NEW</div>
               <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 transition-transform">
                 <Briefcase size={24} />
               </div>
@@ -220,7 +206,7 @@ export default function Home() {
                 <span className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-pulse"></span>
                 Live AI Assistant
               </div>
-
+              
               <div className="space-y-4 mt-4">
                 <div className="self-end bg-white/10 ml-8 p-4 rounded-2xl rounded-tr-sm text-sm text-white">
                   Is it safe to walk around Paharganj market at night?
@@ -260,7 +246,7 @@ export default function Home() {
       <section className="py-20 bg-gray-900/50 border-t border-white/5">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h3 className="text-2xl font-bold text-white mb-8">GetB+ is at your airport. Look for us when you land.</h3>
-
+          
           <div className="flex flex-col md:flex-row justify-center gap-6 mb-8">
             <Link href="/delhi" className="bg-navy border border-white/10 hover:border-gold/50 transition-colors rounded-full px-6 py-3 flex items-center gap-3">
               <Plane className="text-gold" size={20} />
@@ -275,7 +261,7 @@ export default function Home() {
               <span className="text-white font-medium">Bengaluru KIAL</span>
             </Link>
           </div>
-
+          
           <p className="text-gray-400">Visit our activation desk at international arrivals for personal setup help.</p>
         </div>
       </section>

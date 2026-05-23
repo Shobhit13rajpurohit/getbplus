@@ -33,9 +33,6 @@ export default function TransportPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Copy */}
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-bold">
-                Phase 2 — Now Live
-              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
                 Airport to Hotel. <span className="text-green-400 block mt-2">Fixed Fare. Zero Surprises.</span>
               </h1>
@@ -117,7 +114,7 @@ export default function TransportPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-navy mb-16">The Airport Arrival Experience</h2>
-
+          
           <div className="grid md:grid-cols-2 gap-8">
             {/* Without GetB+ */}
             <div className="bg-white rounded-2xl shadow-sm border border-red-100 p-8 relative overflow-hidden">
@@ -164,7 +161,7 @@ export default function TransportPage() {
       <section className="py-24 bg-white" id="steps-container">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-navy mb-20">How Booking Works</h2>
-
+          
           <div className="relative">
             {/* Progress Line Background */}
             <div className="hidden md:block absolute top-6 left-[12%] right-[12%] h-1 bg-gray-200 z-0"></div>
@@ -212,23 +209,23 @@ export default function TransportPage() {
       <section id="fares" className="py-24 bg-navy-dark">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Fixed Airport Fares</h2>
-
+          
           <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
             {/* Tabs */}
             <div className="flex border-b border-gray-200">
-              <button
+              <button 
                 onClick={() => setActiveTab('delhi')}
                 className={`flex-1 py-4 text-center font-bold transition-colors ${activeTab === 'delhi' ? 'bg-gold/10 text-gold border-b-2 border-gold' : 'text-gray-500 hover:bg-gray-50'}`}
               >
                 Delhi IGI
               </button>
-              <button
+              <button 
                 onClick={() => setActiveTab('mumbai')}
                 className={`flex-1 py-4 text-center font-bold transition-colors ${activeTab === 'mumbai' ? 'bg-gold/10 text-gold border-b-2 border-gold' : 'text-gray-500 hover:bg-gray-50'}`}
               >
                 Mumbai CSIA
               </button>
-              <button
+              <button 
                 onClick={() => setActiveTab('bengaluru')}
                 className={`flex-1 py-4 text-center font-bold transition-colors ${activeTab === 'bengaluru' ? 'bg-gold/10 text-gold border-b-2 border-gold' : 'text-gray-500 hover:bg-gray-50'}`}
               >
@@ -319,7 +316,7 @@ export default function TransportPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-5 gap-8 items-stretch">
-
+            
             {/* Driver Trust (Takes up 3 columns) */}
             <div className="md:col-span-3 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
               <div className="w-12 h-12 bg-navy/5 rounded-full flex items-center justify-center mb-6">
@@ -352,7 +349,7 @@ export default function TransportPage() {
                 <strong>Flight delayed?</strong> No charge. We track your flight number and adjust pickup time automatically.
               </div>
             </div>
-
+            
           </div>
         </div>
       </section>

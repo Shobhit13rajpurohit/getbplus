@@ -10,19 +10,16 @@ export const metadata = {
 export default function MerchantPortalPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans">
-
+      
       {/* 1. HERO */}
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-navy overflow-hidden">
         {/* Purple B2B accent background */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#4C1D95]/20 blur-[100px] rounded-full pointer-events-none"></div>
-
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-
+            
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4C1D95]/20 text-[#D8B4FE] text-sm font-bold">
-                GetB+ For Business
-              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
                 More International Customers. <br/>
                 <span className="text-gold">No New Terminal. No New Bank.</span>
@@ -54,7 +51,7 @@ export default function MerchantPortalPage() {
                     <h3 className="font-bold text-navy text-lg">Today&apos;s Transactions</h3>
                     <div className="text-sm text-gray-500">Foreign Cards</div>
                   </div>
-
+                  
                   <div className="mb-8">
                     <div className="text-sm text-gray-500 mb-1">Gross Volume (INR)</div>
                     <div className="text-3xl font-bold text-navy flex items-end gap-3">
@@ -113,7 +110,7 @@ export default function MerchantPortalPage() {
               <h4 className="font-bold text-navy mb-2">Restaurants & Cafes</h4>
               <p className="text-sm text-gray-600">Tourists can tip and pay directly without hunting for an ATM.</p>
             </div>
-
+            
             <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center text-center">
               <div className="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center mb-4">
                 <ShoppingBag className="text-pink-600 w-6 h-6" />
@@ -187,7 +184,7 @@ export default function MerchantPortalPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-
+            
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-navy">Stand Out to International Tourists</h3>
               <div className="inline-flex items-center gap-2 bg-gold/10 px-4 py-2 rounded-full text-gold font-bold border border-gold/30">
@@ -217,7 +214,7 @@ export default function MerchantPortalPage() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-navy mb-16">Transparent Merchant Pricing</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
+            
             {/* Basic Card */}
             <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col">
               <h3 className="text-2xl font-bold text-navy mb-2">Basic</h3>
@@ -263,18 +260,18 @@ export default function MerchantPortalPage() {
               <h2 className="text-3xl font-bold text-navy mb-2">Register Your Business</h2>
               <p className="text-gray-500">Free forever. No credit card. No hidden setup fee.</p>
             </div>
-
+            
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Business Name</label>
                 <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4C1D95] focus:border-transparent outline-none transition-shadow" placeholder="e.g. Sharma Textiles" />
               </div>
-
+              
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Your Mobile Number</label>
                 <input type="tel" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4C1D95] focus:border-transparent outline-none transition-shadow" placeholder="+91" />
               </div>
-
+              
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">City</label>
@@ -301,7 +298,7 @@ export default function MerchantPortalPage() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">GST Number <span className="text-gray-400 font-normal">(Optional)</span></label>
                 <input type="text" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4C1D95] focus:border-transparent outline-none transition-shadow" />
               </div>
-
+              
               <Button type="button" className="w-full py-6 text-lg bg-[#4C1D95] hover:bg-[#3B1775] rounded-xl text-white">
                 Register — We&apos;ll call you within 24 hours
               </Button>

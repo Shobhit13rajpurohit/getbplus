@@ -13,9 +13,6 @@ export default function BaggagePage() {
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-navy overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-bold mb-8">
-            Phase 2 — Now Live
-          </div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white mb-6">
             Checked Out But <span className="text-amber-500">Nowhere to Go?</span>
           </h1>
@@ -39,7 +36,7 @@ export default function BaggagePage() {
               <h3 className="text-xl font-bold text-navy mb-3 relative z-10">Early Arrival</h3>
               <p className="text-gray-600 relative z-10">&quot;Hotel check-in is at 3 PM, but my flight landed at 9 AM.&quot;</p>
             </div>
-
+            
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative overflow-hidden group hover:border-amber-200 transition-colors">
               <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <PlaneTakeoff size={80} className="text-amber-600" />
@@ -63,7 +60,7 @@ export default function BaggagePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-navy mb-16">Drop Bags in 3 Steps</h2>
-
+          
           <div className="grid md:grid-cols-3 gap-12 text-center max-w-5xl mx-auto">
             <div className="flex flex-col items-center">
               <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mb-6">
@@ -102,11 +99,11 @@ export default function BaggagePage() {
                 <span className="px-3 py-1 bg-amber-100 text-amber-800 text-sm font-medium rounded-full">Bengaluru</span>
               </div>
             </div>
-
+            
             {/* Map Placeholder */}
             <div className="w-full h-[500px] bg-[#e5e3df] relative">
               <div className="absolute inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
-
+              
               {/* Dummy Pins */}
               <div className="absolute top-[30%] left-[40%] flex flex-col items-center group cursor-pointer">
                 <div className="bg-amber-600 text-white font-bold text-xs px-2 py-1 rounded shadow-lg mb-1 group-hover:scale-110 transition-transform">Connaught Place</div>
@@ -124,7 +121,7 @@ export default function BaggagePage() {
                 <div className="bg-amber-600 text-white font-bold text-xs px-2 py-1 rounded shadow-lg mb-1 group-hover:scale-110 transition-transform">Bandra</div>
                 <div className="w-4 h-4 bg-amber-600 border-2 border-white rounded-full shadow-md"></div>
               </div>
-
+              
               <div className="absolute bottom-6 right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 max-w-xs">
                 <div className="font-bold text-navy mb-1">Over 50+ locations</div>
                 <div className="text-sm text-gray-600 mb-3">Find secure storage within a 10-minute walk from major transit hubs.</div>
@@ -139,18 +136,18 @@ export default function BaggagePage() {
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-
+            
             {/* Pricing Box */}
             <div className="bg-navy p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-40 h-40 bg-amber-500/20 rounded-bl-full pointer-events-none"></div>
               <h3 className="text-2xl font-bold text-amber-400 mb-2">Flat Daily Pricing</h3>
               <p className="text-gray-300 mb-8">Clear, no-surprises storage fees.</p>
-
+              
               <div className="flex items-end gap-2 mb-8">
                 <span className="text-5xl font-bold">₹60</span>
                 <span className="text-gray-400 pb-1">/ bag / day</span>
               </div>
-
+              
               <div className="space-y-4 pt-6 border-t border-white/10">
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-gray-400">Left luggage at hotel</span>
@@ -193,7 +190,7 @@ export default function BaggagePage() {
                 </p>
               </div>
             </div>
-
+            
           </div>
         </div>
       </section>

@@ -17,9 +17,6 @@ export default function AIAssistantPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Copy */}
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-sm font-bold">
-                Phase 2 — Now Live
-              </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight text-white">
                 Pay. Ask. <span className="text-teal-400 block mt-2">Travel India with Confidence.</span>
               </h1>
@@ -45,7 +42,7 @@ export default function AIAssistantPage() {
                     <div className="text-[10px] text-teal-400">Travel Expert</div>
                   </div>
                 </div>
-
+                
                 <div className="flex-1 p-4 bg-navy flex flex-col gap-4 overflow-hidden relative">
                   {/* CSS Animated Conversation Loop */}
                   <div className="absolute inset-0 p-4 flex flex-col gap-4 animate-chat-1">
@@ -105,7 +102,7 @@ export default function AIAssistantPage() {
       <section id="demo" className="py-24 bg-navy-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-white mb-16">Ask Anything About India</h2>
-
+          
           <div className="grid md:grid-cols-3 gap-6">
             {/* Card 1 */}
             <div className="bg-navy border-l-4 border-l-gold rounded-r-2xl p-6 shadow-lg border-y border-r border-white/5">
@@ -156,7 +153,7 @@ export default function AIAssistantPage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-16">
             Our AI uses government-verified auto fare tables, curated scam pattern databases, and real GetB+ transaction data — not internet guesswork.
           </p>
-
+          
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
               <div className="w-16 h-16 bg-navy/5 rounded-full flex items-center justify-center mb-6">
@@ -165,7 +162,7 @@ export default function AIAssistantPage() {
               <h3 className="text-xl font-bold text-navy mb-2">Official fare tables</h3>
               <p className="text-gray-500">Government rates for auto-rickshaws and taxis.</p>
             </div>
-
+            
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
               <div className="w-16 h-16 bg-navy/5 rounded-full flex items-center justify-center mb-6">
                 <MapPin className="text-navy w-8 h-8" />
@@ -173,7 +170,7 @@ export default function AIAssistantPage() {
               <h3 className="text-xl font-bold text-navy mb-2">5,000+ verified facts</h3>
               <p className="text-gray-500">Database of safe zones, cultural norms, and pricing.</p>
             </div>
-
+            
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
               <div className="w-16 h-16 bg-navy/5 rounded-full flex items-center justify-center mb-6">
                 <RefreshCcw className="text-navy w-8 h-8" />
@@ -296,3 +293,4 @@ export default function AIAssistantPage() {
     </div>
   )
 }
+

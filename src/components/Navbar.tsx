@@ -41,32 +41,28 @@ export default function Navbar() {
 
   const featureLinks = [
     {
+      name: 'UPI Payments',
+      desc: 'Scan & pay anywhere in India',
+      href: '/how-it-works',
+      icon: QrCode,
+    },
+    {
       name: 'AI Travel Assistant',
       desc: 'Ask fares, stay safe',
       href: '/ai-assistant',
       icon: Bot,
-      isNew: true
     },
     {
       name: 'Airport Transport',
       desc: 'Fixed fares, vetted drivers',
       href: '/transport',
       icon: Car,
-      isNew: true
     },
     {
       name: 'Baggage Storage',
       desc: 'Store bags, explore free',
       href: '/baggage',
       icon: Briefcase,
-      isNew: false
-    },
-    {
-      name: 'UPI Payments',
-      desc: 'Scan & pay anywhere in India',
-      href: '/how-it-works',
-      icon: QrCode,
-      isNew: false
     }
   ]
 
@@ -92,7 +88,7 @@ export default function Navbar() {
             >
               How It Works
             </Link>
-
+            
             {/* Features Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
@@ -102,7 +98,7 @@ export default function Navbar() {
               >
                 Features <ChevronDown size={14} className={cn("transition-transform", isFeaturesOpen && "rotate-180")} />
               </button>
-
+              
               {isFeaturesOpen && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-white rounded-xl shadow-xl border border-navy/10 overflow-hidden">
                   <div className="p-6">
@@ -123,11 +119,6 @@ export default function Navbar() {
                               <span className="text-[15px] font-semibold text-navy group-hover:text-gold transition-colors">
                                 {feature.name}
                               </span>
-                              {feature.isNew && (
-                                <span className="px-1.5 py-0.5 text-[10px] font-bold bg-gold/20 text-gold rounded-full">
-                                  NEW
-                                </span>
-                              )}
                             </div>
                             <p className="text-[13px] text-gray-500 mt-0.5">
                               {feature.desc}
@@ -157,8 +148,8 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
-              href="/merchant"
+            <Link 
+              href="/merchant" 
               className="text-sm text-gray-300 hover:text-white border border-transparent hover:border-navy px-3 py-2 rounded-md transition-all"
             >
               For Merchants
@@ -189,7 +180,7 @@ export default function Navbar() {
             >
               How It Works
             </Link>
-
+            
             {/* Mobile Features Expanded */}
             <div className="px-3 py-2">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Features</div>
@@ -205,11 +196,6 @@ export default function Navbar() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-medium text-gray-200">{feature.name}</span>
-                        {feature.isNew && (
-                          <span className="px-1.5 py-0.5 text-[10px] font-bold bg-gold/20 text-gold rounded-full">
-                            NEW
-                          </span>
-                        )}
                       </div>
                     </div>
                   </Link>
@@ -231,7 +217,7 @@ export default function Navbar() {
             >
               For Travelers
             </Link>
-
+            
             <div className="pt-4 mt-4 border-t border-white/10">
               <Link
                 href="/merchant"
