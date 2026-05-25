@@ -10,26 +10,43 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#0A1628',
-          light: '#1A2A40',
-          dark: '#050B14'
+          DEFAULT: "var(--color-navy)",
+          mid: "var(--color-navy-mid)",
+          light: "var(--color-navy-light)",
         },
         gold: {
-          DEFAULT: '#FFD700',
-          light: '#FFE44D',
-          dark: '#CCAC00'
-        }
+          DEFAULT: "var(--color-gold)",
+          light: "var(--color-gold-light)",
+          bright: "var(--color-gold-bright)",
+        },
+        offWhite: "var(--color-off-white)",
+        gray: {
+          100: "var(--color-gray-100)",
+          300: "var(--color-gray-300)",
+          500: "var(--color-gray-500)",
+          800: "var(--color-gray-800)",
+        },
+        success: "var(--color-success)",
+        error: "var(--color-error)",
+        trustBlue: "var(--color-trust-blue)",
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        display: ["var(--font-dm-serif)"],
+        sans: ["var(--font-sora)", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      letterSpacing: {
+        tightest: '-2px',
+        tighter: '-1.5px',
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 export default config;

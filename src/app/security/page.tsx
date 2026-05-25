@@ -1,94 +1,102 @@
-import { ShieldCheck, Lock, CreditCard, Server, Fingerprint, EyeOff, FileCheck } from 'lucide-react'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card'
+'use client';
 
-export const metadata = {
-  title: 'Security | GetB+',
-  description: 'Your money is safe. Your data is safe. Here is exactly why.'
-}
+import { SecurityBadge, PillBadge, CTABlock } from '@/components';
+import { motion } from 'framer-motion';
 
-export default function SecurityPage() {
+export default function Security() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="bg-navy min-h-screen">
       {/* HERO */}
-      <section className="pt-24 pb-16 bg-navy text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 bg-navy border border-gold rounded-full flex items-center justify-center">
-              <Lock size={32} className="text-gold" />
-            </div>
-          </div>
-          <h1 className="text-5xl font-bold mb-6">Your money is safe.<br/>Your data is safe.<br/><span className="text-gold">Here&apos;s exactly why.</span></h1>
-        </div>
+      <section className="py-[120px] text-center px-4">
+        <PillBadge className="mb-6">Security & Compliance</PillBadge>
+        <h1 className="font-display text-[48px] md:text-[64px] text-white leading-tight mb-6">
+          Your money is safe.<br />Your card is safe. <span className="text-gold">Here&apos;s the proof.</span>
+        </h1>
       </section>
 
-      {/* COMPLIANCE BADGES */}
-      <section className="py-12 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-8 md:gap-16 items-center text-gray-800 text-lg font-bold">
-          <div className="flex items-center gap-2"><ShieldCheck className="text-blue-600"/> PCI-DSS Certified</div>
-          <div className="flex items-center gap-2"><FileCheck className="text-green-600"/> RBI Compliant</div>
-          <div className="flex items-center gap-2"><Lock className="text-gray-700"/> Visa & Mastercard Tokenized</div>
-          <div className="flex items-center gap-2"><Server className="text-orange-500"/> AWS India Hosted</div>
-        </div>
-      </section>
-
-      {/* DATA PROTECTION */}
-      <section className="py-24 bg-navy-dark">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">Your card number never reaches our servers.</h2>
-            <p className="text-gray-300 text-lg">We use PCI-DSS tokenization. When you link your card, it is encrypted directly by Visa or Mastercard. We receive a &quot;token&quot; — a random string of numbers that works only for GetB+.</p>
-            <p className="text-gray-300 text-lg">If our systems were ever compromised, hackers would find nothing of value. Your actual card details are safely locked in your bank&apos;s vault.</p>
-          </div>
-          <div className="bg-navy p-8 rounded-2xl border border-white/5 flex flex-col items-center gap-6">
-            <div className="flex items-center gap-4 w-full">
-               <CreditCard size={32} className="text-gray-400"/>
-               <div className="h-0.5 bg-gray-600 flex-1 relative"><div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-gray-400 rotate-45"></div></div>
-               <div className="bg-gray-800 px-4 py-2 rounded text-xs text-gray-300">Visa / Mastercard Vault</div>
-            </div>
-            <div className="flex items-center gap-4 w-full justify-end">
-               <div className="bg-navy-light border border-gold px-4 py-2 rounded text-xs text-gold">Secure Token</div>
-               <div className="h-0.5 bg-gold flex-1 relative"><div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-gold rotate-45"></div></div>
-               <div className="font-bold text-white">GetB+ App</div>
-            </div>
+      {/* COMPLIANCE GRID */}
+      <section className="py-[80px] bg-navy-mid border-y border-white/10">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <SecurityBadge type="pci" title="PCI-DSS Certified" />
+            <SecurityBadge type="rbi" title="RBI-Compliant Framework" />
+            <SecurityBadge type="npci" title="NPCI-Aligned" />
+            <SecurityBadge type="dpdp" title="DPDP Act 2023" />
+            <SecurityBadge type="token" title="Visa Tokenization" />
+            <SecurityBadge type="mdes" title="Mastercard MDES" />
+            <SecurityBadge type="aws" title="AWS Mumbai Data Residency" />
+            <SecurityBadge type="biometric" title="Biometric Confirmation" />
           </div>
         </div>
       </section>
 
-      {/* THREE PILLARS */}
-      <section className="py-24 bg-navy">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16">How we protect you</h2>
+      {/* TOKENIZATION EXPLAINER */}
+      <section className="py-[120px]">
+        <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-display text-[36px] text-white mb-16">How Tokenization Works</h2>
+
+          {/* CSS Diagram */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-12">
+            <div className="bg-white/5 border border-red-500/30 rounded-xl p-6 flex-1 w-full relative">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-500 text-white text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-bold">Never Stored</span>
+              <p className="font-mono text-white/50 line-through text-lg">4242 4242 4242 4242</p>
+              <p className="text-sm text-gray-400 mt-2">Raw Card Number</p>
+            </div>
+
+            <div className="text-gold hidden md:block">➔</div>
+            <div className="text-gold md:hidden">↓</div>
+
+            <div className="bg-navy-light border border-gold/30 rounded-xl p-6 flex-1 w-full relative z-10 shadow-[0_0_30px_rgba(201,168,76,0.1)]">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-navy text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-bold">Visa/MC Secure Server</span>
+              <p className="font-sans text-white text-lg font-semibold">Token Generation</p>
+            </div>
+
+            <div className="text-success hidden md:block">➔</div>
+            <div className="text-success md:hidden">↓</div>
+
+            <div className="bg-success/10 border border-success/30 rounded-xl p-6 flex-1 w-full relative">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-success text-white text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-bold">Stored Safely</span>
+              <p className="font-mono text-success text-lg">TKN_982B_X71</p>
+              <p className="text-sm text-success/70 mt-2">Secure Reference Token</p>
+            </div>
+          </div>
+
+          <p className="font-sans text-[16px] text-white/70 max-w-[700px] mx-auto leading-relaxed">
+            When you link your card, the actual numbers are sent directly to the card network (Visa/Mastercard). They return a secure, encrypted token to GetB+. We use this token to process payments. If our servers were ever compromised, hackers would only find useless reference tokens.
+          </p>
+        </div>
+      </section>
+
+      {/* COMMITMENTS */}
+      <section className="py-[100px] bg-offWhite">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-navy-dark border-white/10">
-              <CardHeader>
-                <Fingerprint size={32} className="text-gold mb-4" />
-                <CardTitle>Biometric Required</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-400">Every transaction requires FaceID or TouchID. Even if your phone is stolen and unlocked, they cannot make a payment without your biometrics.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-navy-dark border-white/10">
-              <CardHeader>
-                <ShieldCheck size={32} className="text-gold mb-4" />
-                <CardTitle>Zero-Liability Policy</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-400">If you spot an unauthorized transaction and report it within 24 hours, you pay nothing. We investigate and refund you immediately.</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-navy-dark border-white/10">
-              <CardHeader>
-                <EyeOff size={32} className="text-gold mb-4" />
-                <CardTitle>Data Privacy (DPDP)</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-400">We comply with India&apos;s strict DPDP Act and GDPR. We do not sell your data. We do not track you for ads. Data is stored securely in Mumbai, India.</p>
-              </CardContent>
-            </Card>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="font-sans font-bold text-navy text-xl mb-4">Zero-Liability Policy</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                You are protected against unauthorized transactions. If an unauthorized charge occurs, you are fully covered under your home card issuer&apos;s zero-liability policies, supported by our secure audit trails.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="font-sans font-bold text-navy text-xl mb-4">India Data Residency</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                In strict compliance with the RBI and DPDP Act, all payment routing and user data is processed and stored exclusively on secure AWS servers physically located in Mumbai, India.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="font-sans font-bold text-navy text-xl mb-4">Regulated Partners</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We operate through RBI-regulated sponsor banks and NPCI-approved payment aggregators, ensuring institutional-grade oversight of every transaction crossing the network.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      <CTABlock
+        title="Ready to pay safely?"
+        subtitle="Experience India's QR ecosystem with the security of your home bank."
+      />
     </div>
-  )
+  );
 }

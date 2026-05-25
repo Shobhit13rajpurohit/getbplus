@@ -1,82 +1,97 @@
-import { Card, CardContent } from '@/components/ui/Card'
-import { Globe, Users, Shield } from 'lucide-react'
+'use client';
 
-export const metadata = {
-  title: 'About Us | GetB+',
-  description: 'We are building the financial infrastructure that makes India accessible — one QR code at a time.'
-}
+import { PillBadge, TeamCard, CTABlock } from '@/components';
+import Link from 'next/link';
 
-export default function AboutPage() {
+export default function About() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <section className="pt-24 pb-16 bg-navy text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Making India accessible.<br/><span className="text-gold">One QR code at a time.</span></h1>
-          <p className="text-xl text-gray-300">We are building the cross-border financial infrastructure for the world&apos;s fastest-growing economy.</p>
-        </div>
+    <div className="bg-white min-h-screen">
+      {/* HERO */}
+      <section className="bg-navy py-[120px] text-center px-4">
+        <PillBadge className="mb-6">About Us</PillBadge>
+        <h1 className="font-display text-[48px] md:text-[64px] text-white leading-tight mb-6 max-w-[800px] mx-auto">
+          We are building the financial infrastructure that makes India accessible — <span className="text-gold">one QR code at a time.</span>
+        </h1>
       </section>
 
-      <section className="py-24 bg-navy-dark">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-navy border border-white/10 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold mb-6 text-gold">The Story</h2>
-            <div className="space-y-4 text-gray-300 text-lg">
-              <p>GetB+ was born out of frustration. Our founder, Aadesh S Jain, spent 23 years in international trade traveling across Asia. After experiencing the seamless QR payment ecosystem in Thailand and contrasting it with the broken experience for foreigners in India, the gap became obvious.</p>
-              <p>India has the most advanced payment infrastructure in the world — the UPI network processes billions of transactions. Yet, for an international traveler, paying for a simple cup of tea was impossible without local cash.</p>
-              <p>We built GetB+ to bridge this gap. We partner directly with regulated Indian banks to tokenize your international card and give you a virtual UPI identity. No Indian bank account. No cash. Just tap and pay.</p>
+      {/* FOUNDING STORY */}
+      <section className="py-[120px] bg-offWhite">
+        <div className="max-w-[800px] mx-auto px-4">
+          <div className="bg-white rounded-[24px] p-8 md:p-12 shadow-sm border border-gray-100 relative">
+            <div className="absolute top-8 left-0 w-2 h-16 bg-gold rounded-r-full" />
+            <h2 className="font-display text-[36px] text-navy mb-8 pl-6">The Founding Story</h2>
+
+            <div className="space-y-6 font-sans text-[17px] text-gray-600 leading-relaxed pl-6">
+              <p>
+                Aadesh S Jain spent 23+ years in international trade, facilitating cross-border commerce and regularly hosting global delegates in India. Over the last few years, as India underwent its rapid transition to a cash-less, QR-first economy, a glaring problem emerged.
+              </p>
+              <blockquote className="border-l-2 border-gold pl-6 py-2 my-8">
+                <p className="font-display text-[24px] text-navy italic leading-snug">
+                  &quot;I watched global business leaders, equipped with the world&apos;s most premium credit cards, unable to buy a simple cup of chai at a street stall. They were structurally locked out of the very infrastructure designed to make payments easier.&quot;
+                </p>
+              </blockquote>
+              <p>
+                India&apos;s UPI is a marvel of modern financial technology, processing billions of transactions monthly. But it was designed for domestic bank accounts. Tourists and visiting NRIs were forced back into the archaic world of currency exchange desks, carrying wads of cash, and haggling over change with auto drivers.
+              </p>
+              <p>
+                GetB+ was founded to close this gap. We believe that when you land in India, your existing card should just work. No new bank accounts. No wallet top-ups. Just scan and pay, like a local.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-navy">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16">The Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {name: 'Aadesh S Jain', role: 'CEO & Founder', bio: '23 years in international trade and cross-border finance.'},
-              {name: 'Ruchi Jain', role: 'CFO', bio: 'Expert in financial compliance and regulatory frameworks.'},
-              {name: 'Vikas Jain', role: 'COO', bio: 'Scaling operations and banking partnerships.'},
-              {name: 'Akshay Jain', role: 'Global Expansion', bio: 'Driving international user acquisition and growth.'},
-              {name: 'Shilpi Jain', role: 'Chairperson', bio: 'Strategic direction and corporate governance.'}
-            ].map((member, i) => (
-              <Card key={i} className="bg-navy-dark border-white/10">
-                <CardContent className="pt-6 text-center">
-                  <div className="w-24 h-24 bg-navy-light rounded-full mx-auto mb-4 border-2 border-gold flex items-center justify-center text-gold font-bold text-2xl">
-                    {member.name.charAt(0)}
-                  </div>
-                  <h3 className="font-bold text-lg">{member.name}</h3>
-                  <div className="text-gold text-sm font-semibold mb-3">{member.role}</div>
-                  <p className="text-sm text-gray-400">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
+      {/* TEAM */}
+      <section className="py-[100px] bg-white">
+        <div className="max-w-[1280px] mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-[36px] text-navy mb-4">Leadership Team</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 justify-center">
+            <TeamCard
+              name="Aadesh S Jain" initials="AJ" title="Founder & CEO"
+              bio="23+ years in international trade. Built GetB+ after experiencing India's payment gap firsthand during global trade missions."
+            />
+            <TeamCard
+              name="Ruchi Jain" initials="RJ" title="CFO"
+              bio="Financial architecture and compliance strategy. Ensuring GetB+ operates at the highest fiduciary standards."
+            />
+            <TeamCard
+              name="Vikas Jain" initials="VJ" title="COO"
+              bio="Operational execution across airport hubs, merchant onboarding, and growth corridors."
+            />
+            <div className="lg:col-span-3 flex flex-col md:flex-row justify-center gap-x-8 gap-y-16 mt-8">
+              <TeamCard
+                name="Akshay Jain" initials="AK" title="Global Expansion"
+                bio="Strategy for geographic expansion and international partner development."
+              />
+              <TeamCard
+                name="Shilpi Jain" initials="SJ" title="Chairperson"
+                bio="Guiding strategic vision and institutional relationships."
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-navy-dark">
-         <div className="max-w-4xl mx-auto px-4 text-center">
-           <h2 className="text-3xl font-bold mb-12">Company Details</h2>
-           <div className="grid md:grid-cols-3 gap-8 text-left">
-             <div>
-               <Globe className="text-gray-500 mb-2" />
-               <h4 className="font-semibold text-white">Registered Entity</h4>
-               <p className="text-sm text-gray-400">Adeshilps E-XP & TravelWithU Private Limited</p>
-             </div>
-             <div>
-               <Shield className="text-gray-500 mb-2" />
-               <h4 className="font-semibold text-white">Regulation</h4>
-               <p className="text-sm text-gray-400">Operating under RBI frameworks in partnership with licensed AD-1 banks.</p>
-             </div>
-             <div>
-               <Users className="text-gray-500 mb-2" />
-               <h4 className="font-semibold text-white">Contact</h4>
-               <p className="text-sm text-gray-400">hello@getbplus.com</p>
-             </div>
-           </div>
-         </div>
+      {/* COMPANY DETAILS */}
+      <section className="py-[80px] bg-navy-light border-y border-white/5 text-center">
+        <div className="max-w-[800px] mx-auto px-4">
+          <h3 className="font-sans font-semibold text-white text-[18px] mb-4">Adeshilps E-XP & TravelWithU Private Limited</h3>
+          <p className="font-sans text-[15px] text-white/60 mb-6">Registered in India · Building India&apos;s cross-border payment layer.</p>
+          <div className="flex justify-center gap-6 text-[14px]">
+            <Link href="/press" className="text-gold hover:underline">Press & Media Kit</Link>
+            <span className="text-white/30">|</span>
+            <a href="mailto:investors@getbplus.com" className="text-gold hover:underline">Investor Relations</a>
+          </div>
+        </div>
       </section>
+
+      <CTABlock
+        title="Experience India without limits."
+        subtitle="Download the app and set up your virtual UPI ID today."
+      />
     </div>
-  )
+  );
 }

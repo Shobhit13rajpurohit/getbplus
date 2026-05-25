@@ -4,19 +4,43 @@
 
 @layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 10, 22, 40;
-    --background-end-rgb: 5, 11, 20;
+    --color-navy: #0A1628;
+    --color-navy-mid: #0F2040;
+    --color-navy-light: #1A3060;
+    --color-gold: #C9A84C;
+    --color-gold-light: #F5E9C8;
+    --color-gold-bright: #E8C06A;
+    --color-white: #FFFFFF;
+    --color-off-white: #F7F8FA;
+    --color-gray-100: #F4F5F7;
+    --color-gray-300: #D1D5DB;
+    --color-gray-500: #6B7280;
+    --color-gray-800: #1F2937;
+    --color-success: #059669;
+    --color-error: #DC2626;
+    --color-trust-blue: #1D4ED8;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: theme('colors.navy.DEFAULT');
+  color: var(--color-white);
+  background-color: var(--color-navy);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .glassmorphism-light {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-300);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
   }
 }

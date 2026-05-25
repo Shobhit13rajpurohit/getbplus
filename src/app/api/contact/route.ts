@@ -1,29 +1,22 @@
 import { NextResponse } from 'next/server';
 
-export async function POST(request: Request) {
+export async function POST(req: Request) {
   try {
-    const data = await request.json();
+    const data = await req.formData();
 
-    const { name, email, message } = data;
+    // In a real application, you would use an email service like Resend or Nodemailer here.
+    // For this demonstration, we are simulating a successful submission.
 
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: 'Name, email, and message are required.' },
-        { status: 400 }
-      );
-    }
+    console.log('Contact form submission received:', {
+      name: data.get('name'),
+      email: data.get('email'),
+      subject: data.get('subject'),
+      message: data.get('message'),
+    });
 
-    // In a real application, this would save to a DB or send an email
-    console.log('Contact form submission received:', data);
-
-    return NextResponse.json(
-      { message: 'Message sent successfully.' },
-      { status: 200 }
-    );
-  } catch {
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: true, message: 'Message sent successfully' });
+  } catch (error) {
+    console.error('Error processing contact form:', error);
+    return NextResponse.json({ success: false, message: 'Failed to send message' }, { status: 500 });
   }
 }

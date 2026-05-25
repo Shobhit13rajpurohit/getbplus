@@ -1,29 +1,24 @@
 import { NextResponse } from 'next/server';
 
-export async function POST(request: Request) {
+export async function POST(req: Request) {
   try {
-    const data = await request.json();
+    const data = await req.formData();
 
-    const { name, company, type } = data;
+    // In a real application, you would use an email service like Resend or Nodemailer here.
+    // For this demonstration, we are simulating a successful submission.
 
-    if (!name || !company || !type) {
-      return NextResponse.json(
-        { error: 'Name, company, and type are required fields.' },
-        { status: 400 }
-      );
-    }
+    console.log('Partner form submission received:', {
+      name: data.get('name'),
+      company: data.get('company'),
+      type: data.get('type'),
+      volume: data.get('volume'),
+      email: data.get('email'),
+      message: data.get('message'),
+    });
 
-    // In a real application, this would save to a DB or send an email
-    console.log('Partner application received:', data);
-
-    return NextResponse.json(
-      { message: 'Partnership application received successfully.' },
-      { status: 200 }
-    );
-  } catch {
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: true, message: 'Inquiry sent successfully' });
+  } catch (error) {
+    console.error('Error processing partner form:', error);
+    return NextResponse.json({ success: false, message: 'Failed to send inquiry' }, { status: 500 });
   }
 }
