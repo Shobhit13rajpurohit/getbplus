@@ -9,6 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        desk: '#EAEBF0',
+        hub: {
+          bg: '#FFFBF0',
+          text: '#333333'
+        },
         navy: {
           DEFAULT: '#0A1628',
           light: '#1A2A40',

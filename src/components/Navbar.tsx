@@ -70,21 +70,21 @@ export default function Navbar() {
     <nav
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300',
-        isScrolled ? 'bg-navy/95 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'
+        isScrolled ? 'bg-hub-bg/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-gold flex items-center gap-2">
-            GetB<span className="text-white">+</span>
+            GetB<span className="text-hub-text">+</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/how-it-works"
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-600 hover:text-hub-text transition-colors text-sm font-medium"
             >
               How It Works
             </Link>
@@ -93,7 +93,7 @@ export default function Navbar() {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsFeaturesOpen(!isFeaturesOpen)}
-                className="flex items-center text-gray-300 hover:text-white transition-colors text-sm font-medium gap-1"
+                className="flex items-center text-gray-600 hover:text-hub-text transition-colors text-sm font-medium gap-1"
                 aria-expanded={isFeaturesOpen}
               >
                 Features <ChevronDown size={14} className={cn("transition-transform", isFeaturesOpen && "rotate-180")} />
@@ -134,34 +134,36 @@ export default function Navbar() {
 
             <Link
               href="/pricing"
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-600 hover:text-hub-text transition-colors text-sm font-medium"
             >
               Pricing
             </Link>
             <Link
               href="/for-travelers"
-              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+              className="text-gray-600 hover:text-hub-text transition-colors text-sm font-medium"
             >
               For Travelers
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-600 hover:text-hub-text transition-colors text-sm font-medium"
+            >
+              About
             </Link>
           </div>
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link 
-              href="/merchant" 
-              className="text-sm text-gray-300 hover:text-white border border-transparent hover:border-navy px-3 py-2 rounded-md transition-all"
-            >
-              For Merchants
+            <Link href="/early-access">
+              <Button variant="default">Join Early Access</Button>
             </Link>
-            <Button variant="default">Download App</Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-gray-600 hover:text-hub-text focus:outline-none"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -171,11 +173,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-navy border-t border-white/10 shadow-lg h-screen overflow-y-auto pb-24">
+        <div className="md:hidden absolute top-full left-0 w-full bg-hub-bg border-t border-gray-100 shadow-lg h-screen overflow-y-auto pb-24">
           <div className="px-4 pt-2 space-y-1">
             <Link
               href="/how-it-works"
-              className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
+              className="block px-3 py-4 text-base font-medium text-gray-600 hover:text-hub-text hover:bg-gray-50 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               How It Works
@@ -205,29 +207,31 @@ export default function Navbar() {
 
             <Link
               href="/pricing"
-              className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
+              className="block px-3 py-4 text-base font-medium text-gray-600 hover:text-hub-text hover:bg-gray-50 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Pricing
             </Link>
             <Link
               href="/for-travelers"
-              className="block px-3 py-4 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
+              className="block px-3 py-4 text-base font-medium text-gray-600 hover:text-hub-text hover:bg-gray-50 rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               For Travelers
             </Link>
+            <Link
+              href="/about"
+              className="block px-3 py-4 text-base font-medium text-gray-600 hover:text-hub-text hover:bg-gray-50 rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About
+            </Link>
             
-            <div className="pt-4 mt-4 border-t border-white/10">
-              <Link
-                href="/merchant"
-                className="block px-3 py-4 text-base font-medium text-gold hover:text-gold/80 hover:bg-white/5 rounded-md"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                For Merchants →
-              </Link>
+            <div className="pt-4 mt-4 border-t border-gray-100">
               <div className="pt-4 px-3">
-                <Button variant="default" className="w-full justify-center">Download App</Button>
+                <Link href="/early-access" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="default" className="w-full justify-center">Join Early Access</Button>
+                </Link>
               </div>
             </div>
           </div>

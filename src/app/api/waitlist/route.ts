@@ -1,27 +1,21 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json();
+    const { email } = await request.json()
 
     if (!email || !email.includes('@')) {
-      return NextResponse.json(
-        { error: 'Valid email is required' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Valid email is required' }, { status: 400 })
     }
 
-    // In a real application, this would save to a database or mailing list
-    console.log(`Waitlist signup received for: ${email}`);
+    // Simulate DB delay
+    await new Promise(resolve => setTimeout(resolve, 800))
 
-    return NextResponse.json(
-      { message: 'Successfully joined the waitlist!' },
-      { status: 200 }
-    );
-  } catch {
-    return NextResponse.json(
-      { error: 'Internal Server Error' },
-      { status: 500 }
-    );
+    // In a real app, save to DB here
+    console.log(`Waitlist signup: ${email}`)
+
+    return NextResponse.json({ success: true, message: 'Added to waitlist' })
+  } catch (error) {
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
   }
 }
