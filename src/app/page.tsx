@@ -202,54 +202,171 @@ export default function Home() {
 
         </div>
       </section>
-      <section id="explore" className="py-24 bg-hub-bg relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-hub-text mb-4">Everything You Need in India</h2>
-            <p className="text-xl text-gray-600">One app replacing your wallet, guidebook, and travel agent.</p>
-          </div>
+      <section id="explore" className="py-32 bg-hub-bg relative overflow-hidden">
+        {/* Subtle background animated gradient blobs to add human/organic feel */}
+        <motion.div 
+          animate={{ rotate: 360, scale: [1, 1.1, 1] }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px] pointer-events-none"
+        ></motion.div>
+        <motion.div 
+          animate={{ rotate: -360, scale: [1, 1.2, 1] }}
+          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+          className="absolute top-40 right-0 w-[500px] h-[500px] bg-teal-400/5 rounded-full blur-[120px] pointer-events-none"
+        ></motion.div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-hub-text mb-6 tracking-tight">Everything You Need in India</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+              We&apos;ve curated the essential services to make your journey through India seamless, replacing your wallet, guidebook, and travel agent with one intelligent platform.
+            </p>
+          </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+            }}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {/* Card 1 */}
-            <motion.div whileHover={{ y: -5 }} className="glass-card p-8 rounded-3xl relative group">
-              <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6 text-gold group-hover:scale-110 transition-transform shadow-sm">
-                <QrCode size={24} />
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              whileHover={{ y: -10 }}
+              className="glass-card p-8 rounded-[2rem] relative group bg-white/70 hover:bg-white transition-colors duration-500 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/0 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative mb-8 mt-2 h-16 w-16">
+                <motion.div 
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 bg-gold/10 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] group-hover:scale-110 transition-transform duration-500"
+                ></motion.div>
+                <div className="absolute inset-0 flex items-center justify-center text-gold group-hover:scale-110 transition-transform duration-500">
+                  <QrCode size={28} strokeWidth={1.5} />
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Pay at Any UPI QR</h3>
-              <p className="text-gray-600 text-sm mb-6 flex-1">Your foreign card works at 350M+ merchants. No bank needed.</p>
-              <Link href="/how-it-works" className="text-gold text-sm font-semibold group-hover:underline">How It Works →</Link>
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">Pay at Any<br/>UPI QR</h3>
+              <p className="text-gray-600 text-sm mb-8 leading-relaxed font-medium">Your foreign card works instantly at 350M+ merchants. Experience the freedom of cashless travel without setting up a local bank account.</p>
+              
+              <div className="mt-auto">
+                <Link href="/how-it-works" className="inline-flex items-center gap-2 text-gold text-sm font-bold group-hover:gap-3 transition-all">
+                  How It Works <span className="text-lg leading-none">→</span>
+                </Link>
+              </div>
             </motion.div>
             
             {/* Card 2 */}
-            <motion.div whileHover={{ y: -5 }} className="glass-card p-8 rounded-3xl relative group">
-              <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center mb-6 text-teal-400 group-hover:scale-110 transition-transform">
-                <Bot size={24} />
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              whileHover={{ y: -10 }}
+              className="glass-card p-8 rounded-[2rem] relative group bg-white/70 hover:bg-white transition-colors duration-500 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-400/0 to-teal-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative mb-8 mt-2 h-16 w-16">
+                <motion.div 
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                  className="absolute inset-0 bg-teal-400/10 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] group-hover:scale-110 transition-transform duration-500"
+                ></motion.div>
+                <div className="absolute inset-0 flex items-center justify-center text-teal-500 group-hover:scale-110 transition-transform duration-500">
+                  <Bot size={28} strokeWidth={1.5} />
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">AI Travel Expert</h3>
-              <p className="text-gray-600 text-sm mb-6 flex-1">Fair fares, scam alerts, safety tips. Ask anything about India.</p>
-              <Link href="/ai-assistant" className="text-teal-400 text-sm font-semibold group-hover:underline">Try AI Assistant →</Link>
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">AI Travel<br/>Expert</h3>
+              <p className="text-gray-600 text-sm mb-8 leading-relaxed font-medium">Always get the local price. Our AI verifies fair fares, provides scam alerts, and shares cultural nuances. Ask anything about India.</p>
+              
+              <div className="mt-auto">
+                <Link href="/ai-assistant" className="inline-flex items-center gap-2 text-teal-500 text-sm font-bold group-hover:gap-3 transition-all">
+                  Try AI Assistant <span className="text-lg leading-none">→</span>
+                </Link>
+              </div>
             </motion.div>
 
             {/* Card 3 */}
-            <motion.div whileHover={{ y: -5 }} className="glass-card p-8 rounded-3xl relative group">
-              <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
-                <Car size={24} />
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              whileHover={{ y: -10 }}
+              className="glass-card p-8 rounded-[2rem] relative group bg-white/70 hover:bg-white transition-colors duration-500 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative mb-8 mt-2 h-16 w-16">
+                <motion.div 
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute inset-0 bg-green-500/10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] group-hover:scale-110 transition-transform duration-500"
+                ></motion.div>
+                <div className="absolute inset-0 flex items-center justify-center text-green-500 group-hover:scale-110 transition-transform duration-500">
+                  <Car size={28} strokeWidth={1.5} />
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Airport Transport</h3>
-              <p className="text-gray-600 text-sm mb-6 flex-1">Fixed fare cabs from Delhi, Mumbai, Bengaluru airports.</p>
-              <Link href="/transport" className="text-green-400 text-sm font-semibold group-hover:underline">See Fares →</Link>
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">Airport<br/>Transport</h3>
+              <p className="text-gray-600 text-sm mb-8 leading-relaxed font-medium">Skip the chaotic taxi stands. Enjoy transparent, fixed-fare cabs directly from Delhi, Mumbai, and Bengaluru airports.</p>
+              
+              <div className="mt-auto">
+                <Link href="/transport" className="inline-flex items-center gap-2 text-green-500 text-sm font-bold group-hover:gap-3 transition-all">
+                  See Fares <span className="text-lg leading-none">→</span>
+                </Link>
+              </div>
             </motion.div>
 
             {/* Card 4 */}
-            <motion.div whileHover={{ y: -5 }} className="glass-card p-8 rounded-3xl relative group">
-              <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 transition-transform">
-                <Briefcase size={24} />
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+              }}
+              whileHover={{ y: -10 }}
+              className="glass-card p-8 rounded-[2rem] relative group bg-white/70 hover:bg-white transition-colors duration-500 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/0 to-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative mb-8 mt-2 h-16 w-16">
+                <motion.div 
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                  className="absolute inset-0 bg-amber-500/10 rounded-[50%_50%_20%_80%/25%_80%_20%_75%] group-hover:scale-110 transition-transform duration-500"
+                ></motion.div>
+                <div className="absolute inset-0 flex items-center justify-center text-amber-500 group-hover:scale-110 transition-transform duration-500">
+                  <Briefcase size={28} strokeWidth={1.5} />
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Luggage Storage</h3>
-              <p className="text-gray-600 text-sm mb-6 flex-1">Store bags at verified locations. Explore hands-free.</p>
-              <Link href="/baggage" className="text-amber-500 text-sm font-semibold group-hover:underline">Find Locations →</Link>
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">Luggage<br/>Storage</h3>
+              <p className="text-gray-600 text-sm mb-8 leading-relaxed font-medium">Maximize your final day. Securely store your bags at verified locations across major cities and explore completely hands-free.</p>
+              
+              <div className="mt-auto">
+                <Link href="/baggage" className="inline-flex items-center gap-2 text-amber-500 text-sm font-bold group-hover:gap-3 transition-all">
+                  Find Locations <span className="text-lg leading-none">→</span>
+                </Link>
+              </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
