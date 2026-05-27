@@ -443,13 +443,13 @@ export default function Home() {
       {/* SECTION 7: TESTIMONIALS (Updated) */}
       <section className="py-24 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-hub-text">Trusted by global travelers.</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-hub-text">Early feedback from our beta users.</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Sarah L.", loc: "🇬🇧 UK Tourist", quote: "I was dreading the cash exchange process. Downloaded this in London, and paid my taxi from Delhi airport immediately." },
-              { name: "Michael T.", loc: "🇺🇸 US Business Traveler", quote: "Finally. I used to have my colleagues pay for my coffee because they only took QR. Now my Amex works everywhere." },
-              { name: "James T.", loc: "🇦🇺 Australia", quote: "GetB+ AI told me I was paying double for autos in Jaipur. Saved me hundreds over 5 days." },
-              { name: "Fatima Al-S.", loc: "🇦🇪 UAE", quote: "Pre-booked my cab from IGI before the flight. Driver was waiting. Never had to worry about the taxi scam everyone warns about." }
+              { name: "Early Access Tester", loc: "🇬🇧 UK to India", quote: "The concept is exactly what I need. Trying to get an Indian bank account just to use UPI was impossible on my tourist visa. Can't wait for the full launch." },
+              { name: "Beta Waitlist Member", loc: "🇺🇸 US Business Traveler", quote: "I travel to Mumbai twice a year. Having a way to link my corporate Amex to pay local street vendors via QR will change everything." },
+              { name: "NRI Visitor", loc: "🇦🇺 Australia", quote: "The AI feature sounds amazing. Knowing fair auto fares upfront would have saved me so much hassle on my last trip to Jaipur." },
+              { name: "International Traveler", loc: "🇦🇪 UAE", quote: "Being able to sort out airport transfers and payments before even landing at Delhi IGI is exactly the peace of mind I'm looking for." }
             ].map((t, i) => (
               <Card key={i} className="glass-card flex flex-col">
                 <CardContent className="pt-6 flex-1 flex flex-col">
