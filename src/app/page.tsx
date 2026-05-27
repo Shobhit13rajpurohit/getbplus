@@ -12,6 +12,7 @@ import {
   QrCode,
   Plane
 } from "lucide-react"
+import MobilePaymentAnimation from "@/components/MobilePaymentAnimation"
 
 export default function Home() {
   return (
@@ -68,50 +69,13 @@ export default function Home() {
             {/* Hero Visual - Split Animation Simulation */}
             <div className="relative mx-auto w-full max-w-[320px] aspect-[1/2] mt-10 md:mt-0">
               {/* Phone Frame */}
-              <div className="absolute inset-0 border-[8px] border-gray-800 rounded-[2.5rem] bg-white shadow-2xl overflow-hidden z-20">
+              <div className="absolute inset-0 border-[8px] border-gray-800 rounded-[2.5rem] bg-gray-900 shadow-2xl overflow-hidden z-20">
                 {/* Top Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-gray-800 rounded-b-xl z-30"></div>
                 
-                {/* Screen content area with cross-fade animation setup */}
+                {/* Screen content area with dynamic animation */}
                 <div className="relative w-full h-full">
-                  {/* Screen 1: Payment Success */}
-                  <div className="absolute inset-0 bg-green-500/10 flex flex-col items-center justify-center p-6 animate-fade-in-out">
-                    <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mb-6">
-                      <CheckCircleIcon className="text-white w-10 h-10" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">₹450 Paid</h3>
-                    <p className="text-green-400 font-medium">To: Sharma Chaiwala</p>
-                    <div className="mt-12 bg-white/5 w-full p-4 rounded-xl border border-white/10">
-                      <div className="flex justify-between text-sm text-gray-300 mb-2">
-                        <span>Card charged</span>
-                        <span>$5.42 USD</span>
-                      </div>
-                      <div className="flex justify-between text-xs text-gray-500">
-                        <span>Zero forex markup</span>
-                        <CheckCircleIcon className="w-4 h-4 text-green-500" />
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Screen 2: AI Chat */}
-                  <div className="absolute inset-0 bg-white flex flex-col p-4 pt-10 animate-fade-in-out-delayed opacity-0">
-                    <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
-                      <div className="w-8 h-8 rounded-full bg-teal-600 flex items-center justify-center"><Bot size={16} className="text-white"/></div>
-                      <div>
-                        <div className="text-sm font-bold text-gray-800">GetB+ AI</div>
-                        <div className="text-[10px] text-teal-400">Travel Expert</div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-4 flex-1">
-                      <div className="self-end bg-gray-100 ml-8 p-3 rounded-2xl rounded-tr-sm text-sm text-gray-800">
-                        Was my ₹350 auto fare from CP to India Gate fair?
-                      </div>
-                      <div className="self-start bg-teal-50 border border-teal-100 mr-8 p-3 rounded-2xl rounded-tl-sm text-sm text-gray-700">
-                        That&apos;s tourist pricing. Metered fare is ₹80-130. You overpaid by ~₹220. Tip: insist on meter next time.
-                      </div>
-                    </div>
-                  </div>
+                  <MobilePaymentAnimation />
                 </div>
               </div>
               
@@ -120,26 +84,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
-        {/* Custom Animation Styles */}
-        <style dangerouslySetInnerHTML={{__html: `
-          @keyframes fade-in-out {
-            0%, 45% { opacity: 1; visibility: visible; }
-            50%, 95% { opacity: 0; visibility: hidden; }
-            100% { opacity: 1; visibility: visible; }
-          }
-          @keyframes fade-in-out-delayed {
-            0%, 45% { opacity: 0; visibility: hidden; }
-            50%, 95% { opacity: 1; visibility: visible; }
-            100% { opacity: 0; visibility: hidden; }
-          }
-          .animate-fade-in-out {
-            animation: fade-in-out 8s infinite;
-          }
-          .animate-fade-in-out-delayed {
-            animation: fade-in-out-delayed 8s infinite;
-          }
-        `}} />
       </section>
 
       {/* NEW SECTION: Platform Features Grid */}
